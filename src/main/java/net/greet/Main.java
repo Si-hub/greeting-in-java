@@ -10,13 +10,12 @@ public class Main {
         Greet greet = new Greet();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter command: ");
-        String name = scanner.nextLine();
 
-        while (!name.equals("exit")) {
-            System.out.print("Enter command: ");
-            System.out.println(name);
-            name = scanner.nextLine();
+        boolean execute= true;
+
+        while (execute) {
+            System.out.print("Enter a command: " + "\n Or Enter help for help menu \n");
+            String name = scanner.nextLine();
 
             String[] splitStrings = name.split(" ");
 
@@ -38,6 +37,10 @@ public class Main {
                 greet.checkUser(userName, lang);
             }else if(command.equals("counter")){
                 System.out.println(greet.counter());
+            }else if(command.equals("exit")){
+                execute = false;
+                System.out.println("Good bye!!");
+                break;
             }
         }
 
