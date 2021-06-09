@@ -4,7 +4,7 @@ public enum Languages {
 
     XHOSA("MOLO, UNJANI? "),
     ENGLISH("HEY, HOW ARE YOU? "),
-    SOTHO("DUMELANG, KETENG UKAI? ");
+    SOTHO("DUMELANG, KE TENG UKAI? ");
 
     String language;
 
